@@ -1,5 +1,6 @@
 Домашнее задание к занятию «Система мониторинга Zabbix» Ялов Л.В
-![alt text](https://github.com/username/reponame/blob/branch/path/image.png)
+![alt text](https://github.com/lyalov/zabbix/blob/main/login.jpg)
+![alt text](https://github.com/lyalov/zabbix/blob/main/login.jpg)
 
 
 apt update
