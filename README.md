@@ -4,7 +4,7 @@
 ![alt text](https://github.com/lyalov/zabbix/blob/main/start_zabbix-server.jpg)
 
 
-<pre> ```bash apt update
+<pre> ``` apt update
 nano /etc/ssh/sshd_config
 systemctl restart ssh
 wget https://repo.zabbix.com/zabbix/7.4/release/debian/pool/main/z/zabbix-release/zabbix-release_latest+debian13_all.deb
