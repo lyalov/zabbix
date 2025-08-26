@@ -1,6 +1,6 @@
 Домашнее задание к занятию «Система мониторинга Zabbix» Ялов Л.В
 ![alt text](https://github.com/lyalov/zabbix/blob/main/login.jpg)
-![alt text](https://github.com/lyalov/zabbix/blob/main/login.jpg)
+![alt text](https://github.com/lyalov/zabbix/blob/main/start_zabbix-server.jpg)
 
 
 apt update
