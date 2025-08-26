@@ -15,36 +15,47 @@ apt install apache2 libapache2-mod-php   php php-mysql php-ldap php-bcmath php-m
 ``` 
 
 #Создаем учетку и базу в postgress
-<pre> ``sudo -u postgres psql
+```bash
+sudo -u postgres psql
 CREATE USER zabbix WITH PASSWORD 'zabbix';
 CREATE DATABASE zabbixdb OWNER zabbix;
-\q ``` </pre>
+\q
+``` 
 #Копируем схему в базу 
-<pre> ``` zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u postgres psql -d zabbixdb ``` </pre>
+```bash
+ zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u postgres psql -d zabbixdb
+```
 #Разрешаем ходит zabbix учетки в базу
 # Редактируем фаил /etc/postgresql/17/main/pg_hba.conf
-
-<pre> ```local   all             zabbix                                  md5``` </pre>
-
+```bash
+local   all             zabbix                                  md5 
+```
 #В конфиг  /etc/zabbix/zabbix_server.conf добавляем подключение
-<pre> ```DBHost=localhost
+```bash
+DBHost=localhost
 DBName=zabbixdb
 DBUser=Zabbix
 DBPassword=zabbix
 #Добавляем права на папку 
-chown zabbix:zabbix /run/zabbix``` </pre>
+chown zabbix:zabbix /run/zabbix```
+```
 ОТВЕТ 2
 ![alt text](https://github.com/lyalov/zabbix/blob/main/agents.jpg)
 ![alt text](https://github.com/lyalov/zabbix/blob/main/statistic.jpg)
 ![alt text](https://github.com/lyalov/zabbix/blob/main/log_zabbix-b.jpg)
 #Команды 
- <pre> ```apt install -y zabbix-agent``` </pre>
+```bash
+apt install -y zabbix-agent
+``` 
 #Далее редактируем /etc/zabbix/zabbix_agentd.conf добавляем и раскоменчиваем строки 
-<pre> ```Server=192.168.1.43
+```bash
+Server=192.168.1.43
 ServerActive=192.168.1.43
-Hostname=zab-test``` </pre>
+Hostname=zab-test
+``` 
 
-
-  <pre> ```sudo systemctl restart zabbix-agent
+```bash
+  sudo systemctl restart zabbix-agent
   sudo systemctl enable zabbix-agent
-  sudo systemctl status zabbix-agent``` </pre>
+  sudo systemctl status zabbix-agent
+``` 
