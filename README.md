@@ -1,4 +1,5 @@
 Домашнее задание к занятию «Система мониторинга Zabbix» Ялов Л.В
+ОТВЕТ 1
 ![alt text](https://github.com/lyalov/zabbix/blob/main/login.jpg)
 ![alt text](https://github.com/lyalov/zabbix/blob/main/start_zabbix-server.jpg)
 
@@ -26,10 +27,11 @@ zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u postgres p
 local   all             zabbix                                  md5
 
 #В конфиг  /etc/zabbix/zabbix_server.conf добавляем подключение
-
 DBHost=localhost
 DBName=zabbixdb
 DBUser=Zabbix
 DBPassword=zabbix
 #Добавляем права на папку 
 chown zabbix:zabbix /run/zabbix
+ОТВЕТ 2
+![alt text](https://github.com/lyalov/zabbix/blob/main/login.jpg)
