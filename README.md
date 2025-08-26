@@ -45,6 +45,6 @@ ServerActive=192.168.1.43
 Hostname=zab-test
 
 
-sudo systemctl restart zabbix-agent
-sudo systemctl enable zabbix-agent
-sudo systemctl status zabbix-agent
+  sudo systemctl restart zabbix-agent
+  sudo systemctl enable zabbix-agent
+  sudo systemctl status zabbix-agent
