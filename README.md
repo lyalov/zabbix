@@ -35,4 +35,4 @@ DBPassword=zabbix
 chown zabbix:zabbix /run/zabbix
 ОТВЕТ 2
 ![alt text](https://github.com/lyalov/zabbix/blob/main/agents.jpg)
-![alt text](https://github.com/lyalov/zabbix/blob/main/agents.jpg)
+![alt text](https://github.com/lyalov/zabbix/blob/main/statistic.jpg)
