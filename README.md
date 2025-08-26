@@ -36,3 +36,15 @@ chown zabbix:zabbix /run/zabbix
 ОТВЕТ 2
 ![alt text](https://github.com/lyalov/zabbix/blob/main/agents.jpg)
 ![alt text](https://github.com/lyalov/zabbix/blob/main/statistic.jpg)
+![alt text](https://github.com/lyalov/zabbix/blob/main/log_zabbix-b.jpg)
+#Команды 
+ apt install -y zabbix-agent
+#Далее редактируем /etc/zabbix/zabbix_agentd.conf добавляем и раскоменчиваем строки 
+Server=192.168.1.43
+ServerActive=192.168.1.43
+Hostname=zab-test
+
+
+sudo systemctl restart zabbix-agent
+sudo systemctl enable zabbix-agent
+sudo systemctl status zabbix-agent
